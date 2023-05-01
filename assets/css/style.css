@@ -99,7 +99,10 @@ a {
   text-decoration: none;
 }
 
-.navbar-nav li a {
+.navbar {
+  padding-top: 20px;
+}
+.navbar .navbar-nav li a {
   color: #fff;
 }
 
@@ -121,7 +124,7 @@ a {
 
 /* DEMO-SPECIFIC STYLES */
 .typewriter h1 {
-  color: rgb(53, 225, 10);
+  font-size: 15px;
   font-family: monospace;
   overflow: hidden;
   /* Ensures the content is not revealed until the animation */
@@ -134,20 +137,17 @@ a {
   letter-spacing: 0.15em;
   /* Adjust as needed */
   text-align: center;
-  margin-top: 30px;
-  -webkit-animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
-          animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+  color: rgb(53, 225, 10);
+  animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+@media only screen and (min-width: 768px) {
+  .typewriter h1 {
+    margin-top: 30px;
+    font-size: 30px;
+  }
 }
 
 /* The typing effect */
-@-webkit-keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
 @keyframes typing {
   from {
     width: 0;
@@ -157,14 +157,6 @@ a {
   }
 }
 /* The typewriter cursor effect */
-@-webkit-keyframes blink-caret {
-  from, to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: orange;
-  }
-}
 @keyframes blink-caret {
   from, to {
     border-color: transparent;
@@ -173,30 +165,85 @@ a {
     border-color: orange;
   }
 }
+@media only screen and (min-width: 992px) {
+  #header {
+    display: none;
+  }
+}
+
 .bennar-text {
-  width: 100%;
+  width: 840px;
+  max-width: 100%;
   color: #fff;
   margin: auto;
   justify-content: center;
   text-align: center;
-  padding: 145px 95px;
+  padding: 45px 0px;
+}
+@media only screen and (min-width: 768px) {
+  .bennar-text {
+    padding: 50px 0px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .bennar-text {
+    padding: 100px 0px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .bennar-text {
+    padding: 130px 0px;
+  }
 }
 .bennar-text h1 {
+  font-size: 24px;
   text-align: center;
   color: #fff;
   font-family: "Titillium Web", sans-serif;
-  font-size: 42px;
   font-weight: 700;
 }
+@media only screen and (min-width: 768px) {
+  .bennar-text h1 {
+    font-size: 28px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .bennar-text h1 {
+    font-size: 32px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .bennar-text h1 {
+    font-size: 42px;
+  }
+}
 .bennar-text .button {
-  width: 290px;
-  max-width: 100%;
   background-color: #eb7d4b;
   margin: auto;
-  margin-top: 65px;
-  padding: 25px 0px;
+  margin-top: 20px;
   box-shadow: 1px 3px #b95f35;
   font-family: "TitilliumWeb-SemiBold", sans-serif;
+}
+@media only screen and (min-width: 586px) {
+  .bennar-text .button {
+    width: 170px;
+    padding: 10px 0px;
+    margin-top: 12px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .bennar-text .button {
+    width: 200px;
+    padding: 15px 0px;
+    margin-top: 40px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .bennar-text .button {
+    width: 290px;
+    padding: 25px 0px;
+    margin-top: 65px;
+  }
 }
 .bennar-text .button a {
   color: #fff;
@@ -207,103 +254,199 @@ a {
   background-color: #1B1A17;
   justify-content: center;
   text-align: center;
-  padding: 120px 0px;
   justify-content: center;
+  padding: 30px 0px;
+}
+@media only screen and (min-width: 768px) {
+  .servicessection {
+    padding: 50px 0px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .servicessection {
+    padding: 120px 0px;
+  }
 }
 .servicessection h1 {
   color: rgb(228, 88, 38);
-  font-size: 40px;
-  margin-bottom: 50px;
+  font-size: 24px;
+  margin-bottom: 20px;
   font-family: "TitilliumWeb-Bold", sans-serif;
 }
-.servicessection p {
+@media only screen and (min-width: 568px) {
+  .servicessection h1 {
+    font-size: 28px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .servicessection h1 {
+    font-size: 30px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .servicessection h1 {
+    font-size: 40px;
+  }
+}
+.servicessection h5 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .servicessection h5 {
+    margin-bottom: 40px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .servicessection h5 {
+    font-size: 18px;
+    margin-bottom: 80px;
+  }
+}
+
+.scrollbox {
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+@media only screen and (min-width: 992px) {
+  .scrollbox {
+    overflow: unset;
+  }
+}
+.scrollbox .srsec {
+  width: 1100px;
+}
+.scrollbox p {
   color: #E6D5B8;
   text-align: center;
   font-family: "TitilliumWeb-Regular", sans-serif;
-  font-size: 18px;
-  margin-bottom: 80px;
+  font-size: 16px;
 }
-.servicessection .services_box {
-  width: 100%;
-  height: 100%;
-  justify-content: center;
+
+.services_box {
+  margin: 0;
   text-align: center;
 }
-.servicessection .services_box h3 {
+.services_box h3 {
   font-family: "TitilliumWeb-Bold", sans-serif;
   font-size: 24px;
   margin-bottom: 30px;
 }
-.servicessection .services_box .iconbox1 {
+.services_box .iconbox1 {
   width: 100px;
   max-width: 100%;
   height: 100px;
   margin: auto;
 }
-.servicessection .services_box .iconbox1 img {
+.services_box .iconbox1 img {
   width: 100%;
   height: 100%;
 }
-.servicessection .services_box .iconbox2 {
+.services_box .iconbox2 {
   width: 80px;
   max-width: 100%;
   height: 100px;
   margin: auto;
 }
-.servicessection .services_box .iconbox2 img {
+.services_box .iconbox2 img {
   width: 100%;
   height: 100%;
 }
-.servicessection .services_box .iconbox3 {
+.services_box .iconbox3 {
   width: 124px;
   max-width: 100%;
   height: 100px;
   margin: auto;
 }
-.servicessection .services_box .iconbox3 img {
+.services_box .iconbox3 img {
   width: 100%;
   height: 100%;
 }
-.servicessection .services_box .iconbox4 {
+.services_box .iconbox4 {
   width: 88px;
   max-width: 100%;
   height: 100px;
   margin: auto;
 }
-.servicessection .services_box .iconbox4 img {
+.services_box .iconbox4 img {
   width: 100%;
   height: 100%;
 }
-.servicessection .services_box .text_box {
+.services_box .text_box {
   margin-top: 60PX;
 }
-.servicessection .services_box .text_box h3 {
+.services_box .text_box h3 {
   color: rgb(240, 165, 0);
 }
-.servicessection .services_box .text_box p {
+.services_box .text_box p {
   color: rgb(230, 213, 184);
 }
 
 .teamsection {
   background-color: rgb(230, 213, 184);
-  padding: 120px 0px;
+  padding: 30px 0px;
+}
+@media only screen and (min-width: 768px) {
+  .teamsection {
+    padding: 50px 0px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .teamsection {
+    padding: 120px 0px;
+  }
 }
 .teamsection h1 {
   text-align: center;
-  font-size: 41.29px;
+  font-size: 24px;
   font-family: "TitilliumWeb-Bold", sans-serif;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
+}
+@media only screen and (min-width: 586px) {
+  .teamsection h1 {
+    font-size: 28px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .teamsection h1 {
+    font-size: 32px;
+    margin-bottom: 50px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .teamsection h1 {
+    font-size: 41.29px;
+    margin-bottom: 50px;
+  }
 }
 .teamsection p {
   text-align: center;
-  font-size: 18.58px;
-  margin-bottom: 80px;
+  font-size: 14px;
+  margin-bottom: 40px;
 }
-.teamsection .team_box {
+@media only screen and (min-width: 768px) {
+  .teamsection p {
+    font-size: 18.58px;
+    margin-bottom: 50px;
+  }
+}
+.teamsection .scrollbox {
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+@media only screen and (min-width: 992px) {
+  .teamsection .scrollbox {
+    overflow: unset;
+  }
+}
+.teamsection .scrollbox .team_scr {
+  width: 1100px;
+}
+.teamsection .scrollbox .team_scr .team_box {
   justify-content: center;
   text-align: center;
 }
-.teamsection .team_box .image {
+.teamsection .scrollbox .team_scr .team_box .image {
   border-radius: 50%;
   width: 200px;
   max-width: 100%;
@@ -312,26 +455,30 @@ a {
   margin-bottom: 40px;
   border: 2px solid rgb(27, 26, 23);
 }
-.teamsection .team_box .image img {
+.teamsection .scrollbox .team_scr .team_box .image img {
   width: 100%;
   border-radius: 50%;
   height: 200px;
 }
-.teamsection .team_box .textbox h2 {
+.teamsection .scrollbox .team_scr .team_box .textbox h2 {
   font-size: 24px;
   font-family: "TitilliumWeb-Bold", sans-serif;
   color: rgb(27, 26, 23);
   font-style: Bold;
 }
-.teamsection .team_box .textbox h6 {
+.teamsection .scrollbox .team_scr .team_box .textbox h6 {
   color: rgb(228, 88, 38);
 }
-.teamsection .team_box .social_icon ul {
+.teamsection .scrollbox .team_scr .team_box .textbox p {
+  margin-bottom: 20px;
+  color: rgb(27, 26, 23);
+}
+.teamsection .scrollbox .team_scr .team_box .social_icon ul {
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
 }
-.teamsection .team_box .social_icon ul li {
+.teamsection .scrollbox .team_scr .team_box .social_icon ul li {
   width: 40px;
   max-width: 100%;
   height: 40px;
@@ -339,7 +486,7 @@ a {
   background-color: rgb(240, 165, 0);
   margin: 10px;
 }
-.teamsection .team_box .social_icon ul li i {
+.teamsection .scrollbox .team_scr .team_box .social_icon ul li i {
   color: rgb(27, 26, 23);
   margin: auto;
   padding-top: 10px;
@@ -347,16 +494,42 @@ a {
 
 .process_section {
   margin: auto;
-  padding: 100px;
+  padding: 30px 10px;
   background-color: rgb(27, 26, 23);
+}
+@media only screen and (min-width: 768px) {
+  .process_section {
+    padding: 50px 30px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .process_section {
+    padding: 100px;
+  }
 }
 .process_section .container {
   display: grid;
   grid-template-columns: repeat(1, 160px);
-  grid-gap: 80px;
-  padding: 60px;
+  grid-gap: 20px;
   margin: auto;
   justify-content: center;
+  grid-template-columns: repeat(1, 160px);
+}
+@media only screen and (min-width: 586px) {
+  .process_section .container {
+    grid-template-columns: repeat(2, 160px);
+  }
+}
+@media only screen and (min-width: 768px) {
+  .process_section .container {
+    grid-template-columns: repeat(3, 160px);
+    grid-gap: 35px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .process_section .container {
+    grid-gap: 80px;
+  }
 }
 .process_section .title {
   justify-content: center;
@@ -366,28 +539,33 @@ a {
   text-align: center;
   color: rgb(228, 88, 38);
   font-family: "TitilliumWeb-Bold", sans-serif;
+  font-size: 24px;
+}
+@media only screen and (min-width: 586px) {
+  .process_section .title h2 {
+    font-size: 28px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .process_section .title h2 {
+    font-size: 32px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .process_section .title h2 {
+    font-size: 42px;
+  }
 }
 .process_section .title p {
   justify-content: center;
   color: rgb(230, 213, 184);
+  margin-bottom: 30px;
+  font-size: 16px;
 }
-@media (min-width: 420px) and (max-width: 659px) {
-  .process_section .container {
-    grid-template-columns: repeat(1, 160px);
+@media only screen and (min-width: 768px) {
+  .process_section .title p {
+    font-size: 18px;
   }
-}
-@media (min-width: 660px) and (max-width: 899px) {
-  .process_section .container {
-    grid-template-columns: repeat(2, 160px);
-  }
-}
-@media (min-width: 900px) {
-  .process_section .container {
-    grid-template-columns: repeat(3, 160px);
-  }
-}
-.process_section .container .box {
-  width: 100%;
 }
 .process_section .container .box h3 {
   display: block;
@@ -421,15 +599,62 @@ a {
   width: 100%;
   height: auto;
   background-color: rgb(230, 213, 184);
-  padding: 120px 0px;
+  padding: 30px 0px;
   justify-content: center;
   text-align: center;
 }
+@media only screen and (min-width: 586px) {
+  .project_section {
+    padding: 50px 0px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .project_section {
+    padding: 70px 0px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .project_section {
+    padding: 90px 0px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .project_section {
+    padding: 120px 0px;
+  }
+}
 .project_section .container h1 {
   color: rgb(27, 26, 23);
+  font-size: 24px;
+}
+@media only screen and (min-width: 586px) {
+  .project_section .container h1 {
+    font-size: 28px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .project_section .container h1 {
+    font-size: 32px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .project_section .container h1 {
+    font-size: 36px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .project_section .container h1 {
+    font-size: 42px;
+  }
 }
 .project_section .container p {
   color: rgb(27, 26, 23);
+  font-size: 16px;
+}
+@media only screen and (min-width: 768px) {
+  .project_section .container p {
+    font-size: 18px;
+  }
 }
 
 ul {
@@ -456,10 +681,20 @@ h2 {
 
 .filter-menu li {
   display: inline-block;
-  padding: 10px 18px;
+  padding: 4px 8px;
   background: rgb(228, 88, 38);
   color: #fff;
   cursor: pointer;
+}
+@media only screen and (min-width: 586px) {
+  .filter-menu li {
+    padding: 8px 10px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .filter-menu li {
+    padding: 10px 18px;
+  }
 }
 
 .filter-menu li:hover,
@@ -473,7 +708,7 @@ h2 {
 }
 
 .filter-item li {
-  width: 50%;
+  width: 50% !important;
   padding: 2px;
 }
 
@@ -494,17 +729,55 @@ h2 {
   max-width: 100%;
   display: block;
   width: 100%;
-  margin: 70px 10px;
+  margin: 10px 10px;
+}
+@media only screen and (min-width: 586px) {
+  .filter-item img {
+    margin: 20px 10px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .filter-item img {
+    margin: 30px 10px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .filter-item img {
+    margin: 40px 10px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .filter-item img {
+    margin: 70px 10px;
+  }
 }
 
 .project_section .button {
-  width: 290px;
   max-width: 100%;
   background-color: rgb(228, 88, 38);
   margin: auto;
-  margin-top: 65px;
-  padding: 25px 0px;
   box-shadow: 1px 3px rgb(188, 133, 16);
+}
+@media only screen and (min-width: 586px) {
+  .project_section .button {
+    width: 170px;
+    padding: 10px 0px;
+    margin-top: 12px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .project_section .button {
+    width: 200px;
+    padding: 15px 0px;
+    margin-top: 40px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .project_section .button {
+    width: 290px;
+    padding: 25px 0px;
+    margin-top: 65px;
+  }
 }
 .project_section .button a {
   color: rgb(27, 26, 23);
@@ -512,7 +785,7 @@ h2 {
 
 @media screen and (min-width: 430px) {
   .filter-item li.active,
-.filter-item li {
+  .filter-item li {
     width: 100%;
   }
   h2 {
@@ -521,7 +794,7 @@ h2 {
 }
 @media screen and (min-width: 1280px) {
   .filter-item li.active,
-.filter-item li {
+  .filter-item li {
     width: 50%;
   }
   h2 {
@@ -530,15 +803,63 @@ h2 {
 }
 .about_section {
   background-color: rgb(240, 165, 0);
-  padding: 120px 0px;
+  padding: 30px 0px;
   display: flex;
   flex-wrap: wrap;
 }
+@media only screen and (min-width: 586px) {
+  .about_section {
+    padding: 50px 0px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .about_section {
+    padding: 70px 0px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .about_section {
+    padding: 90px 0px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .about_section {
+    padding: 120px 0px;
+  }
+}
 .about_section h1 {
   text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+@media only screen and (min-width: 586px) {
+  .about_section h1 {
+    font-size: 28px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .about_section h1 {
+    font-size: 32px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .about_section h1 {
+    font-size: 36px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .about_section h1 {
+    font-size: 42px;
+  }
 }
 .about_section p {
   text-align: center;
+  font-size: 16px;
+}
+@media only screen and (min-width: 768px) {
+  .about_section p {
+    font-size: 18px;
+  }
 }
 .about_section .aboutsection {
   display: flex;
@@ -550,32 +871,53 @@ h2 {
   width: 250px;
   height: auto;
   display: flex;
+  justify-content: center;
 }
 .about_section .aboutsection .image img {
   border-radius: 50%;
-  height: 100px;
+  height: 75px;
   width: 100px;
+}
+@media only screen and (min-width: 586px) {
+  .about_section .aboutsection .image img {
+    height: 100px;
+  }
 }
 .about_section .aboutsection .text {
   margin-left: 15px;
 }
 .about_section .aboutsection .text p {
-  font-style: italic;
   text-align: left;
   font-family: "TitilliumWeb-Italic", sans-serif;
-  font-size: 21px;
+  font-size: 16px;
+}
+@media only screen and (min-width: 586px) {
+  .about_section .aboutsection .text p {
+    font-size: 21px;
+  }
 }
 .about_section .aboutsection .text h2 {
   color: #000;
-  font-size: 24px;
   font-family: "TitilliumWeb-Bold", sans-serif;
   padding: 0px;
   margin: 0px;
+  font-size: 18px;
+}
+@media only screen and (min-width: 992px) {
+  .about_section .aboutsection .text h2 {
+    font-size: 24px;
+  }
 }
 .about_section .aboutsection .text h6 {
   color: rgb(228, 88, 38);
   padding: 0px;
   margin: 0px;
+  font-size: 12px;
+}
+@media only screen and (min-width: 768px) {
+  .about_section .aboutsection .text h6 {
+    font-size: 18px;
+  }
 }
 
 .formsection {
@@ -583,10 +925,51 @@ h2 {
   background-color: rgb(27, 26, 23);
 }
 .formsection .formbox {
-  padding: 100px;
+  padding: 30px 0px;
+}
+@media only screen and (min-width: 586px) {
+  .formsection .formbox {
+    padding: 50px 0px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .formsection .formbox {
+    padding: 70px 0px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .formsection .formbox {
+    padding: 90px 0px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .formsection .formbox {
+    padding: 120px 0px;
+  }
 }
 .formsection .formbox h1 {
   color: #fff;
+  font-size: 24px;
+}
+@media only screen and (min-width: 586px) {
+  .formsection .formbox h1 {
+    font-size: 28px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .formsection .formbox h1 {
+    font-size: 32px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .formsection .formbox h1 {
+    font-size: 36px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .formsection .formbox h1 {
+    font-size: 42px;
+  }
 }
 .formsection .formbox p {
   color: #fff;
@@ -614,13 +997,31 @@ h2 {
   border-radius: 2%;
 }
 .formsection .formbox .button {
-  width: 290px;
-  max-width: 100%;
   background-color: #30bae7;
   margin: auto;
-  margin-top: 65px;
-  padding: 25px 0px;
+  padding: 15px 0px;
   box-shadow: 1px 3px #1d8aaf;
+}
+@media only screen and (min-width: 586px) {
+  .formsection .formbox .button {
+    width: 170px;
+    padding: 10px 0px;
+    margin-top: 12px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .formsection .formbox .button {
+    width: 200px;
+    padding: 15px 0px;
+    margin-top: 40px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .formsection .formbox .button {
+    width: 290px;
+    padding: 25px 0px;
+    margin-top: 65px;
+  }
 }
 
 .footer {
@@ -628,23 +1029,21 @@ h2 {
   color: #808080;
   text-align: center;
   width: 100%;
-  height: 114px;
 }
 .footer .footerbox {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-top: 40px;
+  padding: 20px 0px;
+  font-size: 12px;
 }
-
-@media only screen and (min-width: 576px) {
-  .maindiv #header {
-    display: none;
+@media only screen and (min-width: 586px) {
+  .footer .footerbox {
+    padding: 30px 0px;
   }
 }
-
-@media only screen and (min-width: 576px) {
-  .maindiv #header {
-    display: none;
+@media only screen and (min-width: 768px) {
+  .footer .footerbox {
+    padding: 40px 0px;
   }
 }/*# sourceMappingURL=style.css.map */
